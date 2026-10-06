@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS estrutura_php CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE estrutura_php;
+
+CREATE TABLE IF NOT EXISTS clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    telefone VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS fornecedores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    razao_social VARCHAR(180) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    telefone VARCHAR(30) NOT NULL
+);

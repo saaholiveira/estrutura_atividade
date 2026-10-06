@@ -1,0 +1,34 @@
+ATIVIDADE PHP — MÉTODOS UTILIZADOS NO PROCESSO DE EDIÇÃO
+
+Projeto: estrutura-php-backend
+
+1. filter_input()
+Utilizado para receber e validar o ID enviado pela URL.
+Exemplo: filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT)
+
+2. $pdo->prepare()
+Utilizado para preparar consultas SQL com parâmetros, evitando montar a consulta diretamente com os valores recebidos do formulário.
+
+3. $stmt->execute()
+Utilizado para executar a consulta preparada e enviar os valores dos parâmetros.
+
+4. $stmt->fetch()
+Utilizado para buscar o registro selecionado pelo ID e preencher o formulário de edição.
+
+5. trim()
+Utilizado para remover espaços desnecessários dos dados recebidos do formulário.
+
+6. htmlspecialchars()
+Utilizado na apresentação dos dados para evitar que conteúdo HTML seja interpretado diretamente na página.
+
+7. UPDATE
+Comando SQL utilizado para salvar as alterações no banco de dados.
+Exemplo:
+UPDATE clientes SET nome = ?, email = ?, telefone = ? WHERE id = ?
+
+8. header()
+Utilizado para redirecionar o usuário para a listagem após a atualização ser concluída.
+
+FLUXO DA EDIÇÃO
+
+Listagem → botão Editar → ID do registro → busca no banco → formulário preenchido → alteração dos dados → UPDATE → redirecionamento para a listagem.
